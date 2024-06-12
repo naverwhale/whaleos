@@ -10,7 +10,7 @@ mkdir chromium && cd chromium && vi .gclient
 solutions = [
   {
     "name": "src",
-    "url": "https://chromium.googlesource.com/chromium/src.git@96.0.4664.215",
+    "url": "https://chromium.googlesource.com/chromium/src.git@120.0.6099.302",
     "managed": False,
     "custom_deps": {},
     "custom_vars": {},
@@ -24,7 +24,7 @@ gclient sync
 - Checkout whaleos and build
 ```
 mkdir whaleos && cd whaleos
-repo init -u https://github.com/naverwhale/whaleos-manifest.git -b main
+repo init -u git@github.com:naverwhale/whaleos.git -b main
 repo sync
 cros_sdk --chrome_root ../chromium
 exit
@@ -41,7 +41,7 @@ rm -rf /opt/google/chrome
 ```
 - Copy whale binary to /opt/google/chrome
 ```
-wget https://github.com/naverwhale/whaleos/releases/download/r96/chrome.tar.gz
+wget https://github.com/naverwhale/whaleos/releases/download/r120/chrome.tar.gz
 tar xzvf chrome.tar.gz
 scp -r chrome ${DEVICE_IP}:/opt/google/
 ```
