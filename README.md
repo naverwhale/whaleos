@@ -24,7 +24,7 @@ gclient sync
 - Checkout whaleos and build
 ```
 mkdir whaleos && cd whaleos
-repo init -u https://github.com/naverwhale/whaleos-manifest.git -b main
+repo init -u https://github.com/naverwhale/whaleos-manifest.git -b r96
 repo sync
 cros_sdk --chrome_root ../chromium
 exit
